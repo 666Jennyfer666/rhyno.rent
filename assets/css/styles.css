@@ -338,78 +338,111 @@ a {
 .whatsapp_icon_conteiner {
   position: fixed;
   bottom: 5%;  /* Usa porcentaje para la posición inferior */
-  right: 5%;   /* Usa porcentaje para la posición derecha */
+  right: 2%;   /* Usa porcentaje para la posición derecha */
   z-index: 1000; /* Asegura que el ícono esté por encima de otros elementos */
 }
 
 #whatsapp-icon {
   width: 10vw;  /* Usa viewport width para el tamaño responsive del ícono */
-  max-width: 40px;  /* Limita el tamaño máximo del ícono */
+  max-width: 50px;  /* Limita el tamaño máximo del ícono */
   height: auto; /* Mantiene la proporción del ícono */
 }
+/* fin */
+
+/* titulo */
+/* Estilos para la sección del título */
+.titulo {
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 2rem; /* Espacio alrededor del contenido */
+  background-color: #f8f9fa; /* Color de fondo claro para destacar la sección */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  margin: 7rem 0 0.1rem; /* Espacio arriba (3rem) y abajo (2rem) de la sección */
+}
+
+.titulo h1 {
+  color: #333; /* Color gris oscuro para el texto del título */
+  font-family: 'Arial', sans-serif; /* Fuente más moderna y legible */
+  font-size: 2.5rem; /* Tamaño de fuente grande para el título */
+  margin: 0 0 0.5rem; /* Espacio debajo del título */
+}
+
+.titulo p {
+  color: #555; /* Color gris para el texto descriptivo */
+  font-family: 'Arial', sans-serif; /* Fuente consistente con el título */
+  font-size: 1.2rem; /* Tamaño de fuente más pequeño para el texto descriptivo */
+  margin: 0; /* Elimina márgenes predeterminados */
+  line-height: 1.6; /* Espacio entre líneas para mejorar la legibilidad */
+}
+
+/* fin */
 
 /* contenedores detalles de los autos */
-section{
+section {
   padding: 50px 100px;
 }
 
-.services-conteiner{
+.services-conteiner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px auto));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta las columnas automáticamente */
   gap: 1rem;
   margin-top: 2rem;
 }
 
-.services-conteiner .box{
+.services-conteiner .box {
   padding: 10px;
   border-radius: 1rem;
-  box-shadow: 1px 4px 41px rgba(0,0,0,0.1);
-}
-.services-conteiner .box .box-img{
-  width: 100%;
-  height: 200px;
+  box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Añadido para asegurar que el fondo sea blanco */
 }
 
-.services-conteiner .box .box-img img{
+.services-conteiner .box .box-img {
+  width: 100%;
+  height: 200px; /* Mantén una altura fija para las imágenes */
+  overflow: hidden; /* Asegura que el contenido desbordante se oculte */
+}
+
+.services-conteiner .box .box-img img {
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
-  object-fit: cover;
-  object-position: center;
+  object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarse */
+  object-position: center; /* Centra la imagen */
 }
 
-.services-conteiner .box p{
+.services-conteiner .box p {
   padding: 0 10px;
   border: 1px solid var(--text-color);
   width: 58px;
   border-radius: 0.5rem;
-  margin: 1rem o0 1rem;
+  margin: 1rem 0; /* Corregido el error tipográfico */
 }
 
-.services-conteiner .box h3{
+.services-conteiner .box h3 {
   font-weight: 500;
 }
 
-.services-conteiner .box h2{
-font-size: 1.1rem;
-font-weight: 600;
-color: var(--main-color);
-margin: 0.2rem 0 0.5rem;
+.services-conteiner .box h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--main-color);
+  margin: 0.2rem 0 0.5rem;
 }
 
-.services-container .box h2 span {
+.services-conteiner .box h2 span {
   font-size: 0.8rem;
-  font-weight: 500;  
+  font-weight: 500;
   color: var(--text-color);
-  }
-  .services-container .box .btn{
+}
+
+.services-conteiner .box .btn {
   display: flex;
   justify-content: center;
   background: #474fa0;
   color: #fff;
   padding: 10px;
   border-radius: 0.5rem;
-  }
-    .services-container.box.btn:hover{ 
-    background: var(--main-color);
-  }
+  text-decoration: none; /* Asegura que el enlace no tenga subrayado */
+}
+
+.services-conteiner .box .btn:hover { 
+  background: var(--main-color);
+}
