@@ -333,4 +333,19 @@ a {
     transition: top .3s;
   }
 }
-  
+
+/* Estilos para el boton de whatsapp */
+.whatsapp_icon_conteiner {
+  position: fixed;
+  bottom: 5%;  /* Usa porcentaje para la posición inferior */
+  right: 5%;   /* Usa porcentaje para la posición derecha */
+  z-index: 1000; /* Asegura que el ícono esté por encima de otros elementos */
+}
+
+#whatsapp-icon {
+  width: 10vw;  /* Usa viewport width para el tamaño responsive del ícono */
+  max-width: 40px;  /* Limita el tamaño máximo del ícono */
+  height: auto; /* Mantiene la proporción del ícono */
+}
+
+/* contenedores detalles de los autos */
