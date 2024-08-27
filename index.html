@@ -18,7 +18,7 @@
          <nav class="nav container">
             <div class="nav__data">
                <a href="#" class="nav__logo">
-                  <i class="ri-planet-line"></i> Advertising 
+                  <i class="ri-moon-line"></i> Advertising 
                </a>
                
                <div class="nav__toggle" id="nav-toggle">
@@ -30,20 +30,19 @@
             <!--=============== NAV MENU ===============-->
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
-                  <li><a href="#" class="nav__link">Home</a></li>
+                  <li><a href="#" class="nav__link"> <i class="ri-roadster-line"></i> Autos</a></li>
 
-                  <li><a href="#" class="nav__link">Company</a></li>
+                  <li><a href="#" class="nav__link"> <i class="ri-calendar-line"></i>Reservas</a></li>
 
                   <!--=============== DROPDOWN 1 ===============-->
                   <li class="dropdown__item">
-                     <div class="nav__link">
-                        Analytics <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     <div class="nav__link"><i class="ri-group-line"></i> Sobre nosotros <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
 
                      <ul class="dropdown__menu">
                         <li>
                            <a href="#" class="dropdown__link">
-                              <i class="ri-pie-chart-line"></i> Overview
+                              <i class="ri-pie-chart-line"></i> Coto
                            </a>                          
                         </li>
 
@@ -81,10 +80,9 @@
                         </li>
                      </ul>
                   </li>
-                  
-                  <li><a href="#" class="nav__link">Products</a></li>
 
                   <!--=============== DROPDOWN 2 ===============-->
+                 <!-- eliminar tambien los estilos antes de quitar esta parte del codigo 
                   <li class="dropdown__item">
                      <div class="nav__link">
                         Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
@@ -109,13 +107,28 @@
                            </a>
                         </li>
                      </ul>
-                  </li>
+                  </li>-->
 
-                  <li><a href="#" class="nav__link">Contact</a></li>
+                  <li><a href="#" class="nav__link"><i class="ri-phone-line"></i>Contacto</a></li>
                </ul>
             </div>
          </nav>
       </header>
+      <!--    fin del menu    -->
+      <script type="text/javascript">
+         window.onload = function () {
+           (function (d, script) {
+             script = d.createElement("script");
+             script.type = "text/javascript";
+             script.async = true;
+             script.src = "./src/script/whatsapp.js";
+             //script.src = "https://w.app/widget-v1/5Y1fv.js";
+             d.getElementsByTagName("head")[0].appendChild(script);
+           })(document);
+         };
+       </script>
+       <!-- Fin Boot Whatsapp
+     -->
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
