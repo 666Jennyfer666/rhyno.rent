@@ -7,9 +7,9 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --black-color: hsl(220, 24%, 12%);
+  --black-color: hsl(0, 0%, 0%);
   --black-color-light: hsl(220, 24%, 15%);
-  --black-color-lighten: hsl(220, 20%, 18%);
+  --black-color-lighten: hsl(0, 0%, 0%);/*--black-color-lighten: hsl(220, 20%, 18%);*/
   --white-color: #fff;
   --body-color: hsl(220, 100%, 97%);
 
@@ -376,14 +376,14 @@ a {
 
 .titulo h1 {
   color: #fff; /* Color blanco para el título */
-  font-family: 'Arial', sans-serif; /* Fuente más moderna y legible */
+  font-family: "Montserrat", sans-serif; /* Fuente más moderna y legible */
   font-size: 1.5rem; /* Tamaño de fuente grande para el título */
   margin: 0 0 0.5rem; /* Espacio debajo del título */
 }
 
 .titulo p {
   color: #ddd; /* Color gris claro para el texto descriptivo */
-  font-family: 'Arial', sans-serif; /* Fuente consistente con el título */
+  font-family: "Montserrat", sans-serif; /* Fuente consistente con el título */
   font-size: 1rem; /* Tamaño de fuente para el texto descriptivo */
   margin: 0; /* Elimina márgenes predeterminados */
   line-height: 1.6; /* Espacio entre líneas para mejorar la legibilidad */
@@ -409,7 +409,7 @@ section {
   padding: 10px;
   border-radius: 1rem;
   box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
-  background-color: #fff; /* Añadido para asegurar que el fondo sea blanco */
+  background-color: #ffffff; /* Añadido para asegurar que el fondo sea blanco */
 }
 
 .services-conteiner .box .box-img {
@@ -453,15 +453,16 @@ section {
 .services-conteiner .box .btn {
   display: flex;
   justify-content: center;
-  background: #474fa0;
+  background: #000000;
   color: #fff;
+  border: 5px solid #6092d6;
   padding: 10px;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem; 
   text-decoration: none; /* Asegura que el enlace no tenga subrayado */
 }
 
 .services-conteiner .box .btn:hover { 
-  background: var(--main-color);
+  background: #6092d6; /*cambio fondo boton  */
 }
 
 @media (max-width: 768px) {
@@ -475,60 +476,173 @@ section {
 }
 /* fin*/
 /* footer */
+footer {
+  position: fixed;
+  bottom: 0;
+}
 
-.footer{
-  position: relative;
+@media (max-height:800px) {
+  footer {
+      position: static;
+  }
+}
+
+.footer-distributed {
+  background-color: hsl(0, 0%, 0%);
+  box-sizing: border-box;
   width: 100%;
-  height: auto;
-  background-color: black;
-}
-.wrap{
-  display: flex;
-  flex-wrap: wrap;
-}
-.footer-container{
-  position: relative; 
-  width: 20%;
-  padding: 50px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-.logo{
-  font-size: 1.7em;
-  color: var(--white);
-  text-shadow:  4px 4px var(--shadow-white);
-}
-.footer-container h3{
-  margin-bottom: 15px;
-  font-size: 1.2em;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #ddd;
-}
-.footer-container ul li{
-  margin: 5px;
-}
-.footer-container ul li a{
-  font-size: 1em;
-  color: #ddd;;
-}
-.footer-container ul li a:hover{
-  border-bottom: 2px solid var(--white);
-  transition: all .3s;
+  text-align: left;
+  font: "Montserrat" 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
 }
 
-/* RESPONSIVE */
-@media screen and (max-width:950px) {
-  .footer-container{
-      width: 50%; 
-      padding: 30px 10px;
-  }
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
 }
-@media screen and (max-width:500px) {
-  .footer-container{
-      width: 100%; 
-      padding: 25px 10px;
-  }
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 30%;
 }
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: "Montserrat" 36px sans-serif; /* cambio en la letra */
+  margin: 0;
+}
+
+
+.footer-distributed h3 span {
+  color: #6092d6;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+/* El color azul que se usa para las letras es 6092d6 */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: #6092d6;
+  text-decoration: none;
+  ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+  background-color: #6092d6;
+}
+
+.footer-links a:hover {
+  color: #6092d6;
+}
+
+@media (max-width: 880px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+  }
+  .footer-distributed .footer-center i {
+      margin-left: 0;
+  }
+}       
