@@ -505,7 +505,7 @@ footer {
 /* Footer left */
 
 .footer-distributed .footer-left {
-  width: 30%;
+  width: 45%;
 }
 
 .footer-distributed h3 {
@@ -545,11 +545,11 @@ footer {
 /* El color azul que se usa para las letras es 6092d6 */
 
 .footer-distributed .footer-center {
-  width: 35%;
+  width: 30%;
 }
 
 .footer-distributed .footer-center i {
-  background-color: #33383b;
+  background-color: #000000;
   color: #ffffff;
   font-size: 25px;
   width: 38px;
@@ -589,7 +589,7 @@ footer {
 /* Footer Right */
 
 .footer-distributed .footer-right {
-  width: 30%;
+  width: 20%;
 }
 
 .footer-distributed .footer-company-about {
@@ -607,7 +607,7 @@ footer {
   font-weight: bold;
   margin-bottom: 20px;
 }
-
+/*
 .footer-distributed .footer-icons {
   margin-top: 25px;
 }
@@ -629,7 +629,7 @@ footer {
 
 .footer-distributed .footer-icons a:hover {
   background-color: #6092d6;
-}
+}*/
 
 .footer-links a:hover {
   color: #6092d6;
