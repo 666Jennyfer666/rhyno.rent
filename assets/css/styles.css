@@ -349,45 +349,52 @@ a {
 }
 /* fin */
 
-/* titulo */
 /* Estilo de la sección con imagen de fondo */
 .titulo {
-  position: relative; /* Permite que el contenido flotante dentro se posicione relativamente */
-  background-image: url('../img/videos/630538.jpg'); /* Ruta de la imagen de fondo */
-  background-size: cover; /* Asegura que la imagen cubra toda la sección */
-  background-position: center; /* Centra la imagen de fondo */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  padding: 4rem 2rem; /* Espacio alrededor del contenido dentro de la sección */
-  color: #fff; /* Color del texto en blanco para contraste con la imagen */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  margin: 7rem 0 0.1rem; /* Espacio arriba (7rem) y abajo (0.1rem) de la sección */
-  text-align: center; /* Centra el texto dentro del contenedor */
+  position: relative;
+  padding: 4rem 2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  margin: 7rem 0 0.1rem;
+  background-image: url("/w.advertising/img/videos/playa1.png"); /* Asigna la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Estilo del contenedor del texto */
 .titulo-contenido {
-  position: relative; /* Asegura que el contenido se posicione sobre la imagen de fondo */
-  max-width: 800px; /* Ancho máximo del cuadro de texto */
-  margin: 0 auto; /* Centra el cuadro de texto horizontalmente */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente para mejorar la legibilidad del texto */
-  padding: 2rem; /* Espacio alrededor del contenido dentro del cuadro */
-  border-radius: 0.5rem; /* Bordes redondeados */
+  position: relative;
+  max-width: 800px;
+  margin-left: auto; /* Empuja el contenido hacia la derecha */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center; /* Alinea el texto a la derecha por defecto */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .titulo-contenido {
+      text-align: center; /* Centra el texto en pantallas pequeñas */
+      margin: 0 auto; /* Centra el contenido */
+  }
 }
 
 .titulo h1 {
-  color: #fff; /* Color blanco para el título */
-  font-family: "Montserrat", sans-serif; /* Fuente más moderna y legible */
-  font-size: 1.5rem; /* Tamaño de fuente grande para el título */
-  margin: 0 0 0.5rem; /* Espacio debajo del título */
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
 }
 
 .titulo p {
-  color: #ddd; /* Color gris claro para el texto descriptivo */
-  font-family: "Montserrat", sans-serif; /* Fuente consistente con el título */
-  font-size: 1rem; /* Tamaño de fuente para el texto descriptivo */
-  margin: 0; /* Elimina márgenes predeterminados */
-  line-height: 1.6; /* Espacio entre líneas para mejorar la legibilidad */
+  color: #ddd;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.6;
 }
+
 
 
 /* fin */
