@@ -1,0 +1,36 @@
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp_icon_conteiner {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    z-index: 1000;
+    animation: bounce 2s infinite; /* Aplica la animación "bounce" de manera continua */
+  }
+  
+  #whatsapp-icon {
+    width: 10vw;
+    max-width: 50px;
+    height: auto;
+  }
+  
+  /* Animación de rebote */
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Posición inicial y final */
+    }
+    50% {
+        transform: translateY(-15px); /* Mueve el icono 15px hacia arriba */
+    }
+  }
+  /* fin */
+
+  /* estilos para la img del auto de forma individual */
+  .autoind {
+    text-align-last: center;
+  }
+  .autoind img{
+    max-width: 50%;
+  }
+  
+  

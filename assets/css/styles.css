@@ -75,6 +75,28 @@ a {
 }
 
 /*=============== NAV ===============*/
+.nav__logo-img {
+  width: 90px; /* Tamaño inicial del logo */
+  height: auto; /* Mantener proporción de aspecto */
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+  vertical-align: middle; /* Centrar verticalmente respecto al texto */
+  transition: transform 0.3s ease; /* Animación suave para cambios */
+}
+
+/* Hacer el logo aún más pequeño en pantallas pequeñas */
+@media (max-width: 768px) {
+  .nav__logo-img {
+      width: 150px; /* Reducir tamaño del logo en pantallas pequeñas */
+  }
+}
+
+/* Asegurarse de que el logo no crezca demasiado en pantallas grandes */
+@media (min-width: 1200px) {
+  .nav__logo-img {
+      width: 200px; /* Tamaño máximo para pantallas muy grandes */
+  }
+}
+
 .nav {
   height: var(--header-height);
 }
@@ -334,20 +356,6 @@ a {
   }
 }
 
-/* Estilos para el boton de whatsapp */
-.whatsapp_icon_conteiner {
-  position: fixed;
-  bottom: 5%;  /* Usa porcentaje para la posición inferior */
-  right: 2%;   /* Usa porcentaje para la posición derecha */
-  z-index: 1000; /* Asegura que el ícono esté por encima de otros elementos */
-}
-
-#whatsapp-icon {
-  width: 10vw;  /* Usa viewport width para el tamaño responsive del ícono */
-  max-width: 50px;  /* Limita el tamaño máximo del ícono */
-  height: auto; /* Mantiene la proporción del ícono */
-}
-/* fin */
 
 /* Estilo de la sección con imagen de fondo */
 .titulo {
@@ -398,90 +406,113 @@ a {
 
 
 /* fin */
+/* para las tarjetas de los autos */
 
-/* contenedores detalles de los autos */
-/* contenedores detalles de los autos */
+/*h3{
+  font-stretch: 5px;
+}*/
 section {
-  padding: 1% 4%;
+  padding: 1% 10%;
 }
 
-.services-conteiner {
+.services-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta las columnas automáticamente */
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas grandes */
   gap: 1rem;
   margin-top: 2rem;
 }
 
-.services-conteiner .box {
+.services-container .box {
+  display: flex;
+  align-items: center;
   padding: 10px;
   border-radius: 1rem;
   box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff; /* Añadido para asegurar que el fondo sea blanco */
+  background-color: #ffffff;
 }
 
-.services-conteiner .box .box-img {
-  width: 100%;
-  height: 150px; /* Ajusta la altura para mostrar más de la imagen */
-  overflow: hidden; /* Asegura que el contenido desbordante se oculte */
+.services-container .box .box-img {
+  flex: 1;
+  max-width: 40%; /* La imagen ocupará el 40% del ancho del contenedor */
+  overflow: hidden;
+  border-radius: 1rem; /* Opcional: agrega un borde redondeado a la imagen */
 }
 
-.services-conteiner .box .box-img img {
+.services-container .box .box-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarse */
-  object-position: center; /* Centra la imagen */
+  object-fit: cover;
+  object-position: center;
 }
 
-.services-conteiner .box p {
+.services-container .box .box-content {
+  flex: 1;
+  padding: 0 1rem; /* Espaciado entre la imagen y el contenido */
+}
+
+.services-container .box p {
   padding: 0 10px;
   border: 1px solid var(--text-color);
-  width: 58px;
+  width: fit-content;
   border-radius: 0.5rem;
-  margin: 1rem 0; /* Corregido el error tipográfico */
+  margin: 1rem 0;
 }
 
-.services-conteiner .box h3 {
+.services-container .box h3 {
   font-weight: 500;
 }
 
-.services-conteiner .box h2 {
+.services-container .box h2 {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--main-color);
   margin: 0.2rem 0 0.5rem;
 }
 
-.services-conteiner .box h2 span {
+.services-container .box h2 span {
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-color);
 }
 
-.services-conteiner .box .btn {
-  display: flex;
-  justify-content: center;
+
+.services-container .box .btn {
+  display: block;
   background: #000000;
   color: #fff;
-  /*border: 5px solid #6092d6;*/
   padding: 10px;
-  border-radius: 0.5rem; 
-  text-decoration: none; /* Asegura que el enlace no tenga subrayado */
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center; /* Centra el botón */
+  margin-top: 0.5rem; /* Espaciado superior del botón */
+  font-weight: 700; /* Aumenta el grosor de las letras */
 }
 
-.services-conteiner .box .btn:hover { 
-  background: #6092d6; /*cambio fondo boton  */
+.services-container .box .btn:hover {
+  background: #6092d6;
 }
+
 
 @media (max-width: 768px) {
-  .services-conteiner {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+  .services-container {
+      grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
   }
 
-  .services-conteiner .box .box-img {
-    height: 150px; /* Ajusta la altura para pantallas pequeñas */
+  .services-container .box {
+      flex-direction: row; /* Mantiene la disposición en fila */
+  }
+
+  .services-container .box .box-img {
+      max-width: 30%; /* Imagen más pequeña en pantallas pequeñas */
+  }
+
+  .services-container .box .box-content {
+      max-width: 70%; /* Ajusta el ancho del contenido */
+      padding: 0 0.5rem; /* Reduce el espaciado entre la imagen y el contenido */
   }
 }
-/* fin*/
+
+
 /* footer */
 footer {
   position: fixed;
@@ -500,7 +531,7 @@ footer {
   width: 100%;
   text-align: left;
   font: "Montserrat" 16px sans-serif;
-  padding: 50px 50px 60px 50px;
+  padding: 30px 50px 30px 50px;
   margin-top: 80px;
 }
 
@@ -519,6 +550,27 @@ footer {
   color: #ffffff;
   font: "Montserrat" 36px sans-serif; /* cambio en la letra */
   margin: 0;
+}
+.logo-img {
+  width: 110px; /* Tamaño inicial del logo */
+  height: auto; /* Mantener proporción de aspecto */
+  display: inline-block; /* Asegura que se comporte como elemento en línea */
+  vertical-align: middle; /* Centra verticalmente si hay texto u otros elementos */
+  transition: transform 0.3s ease; /* Animación suave para cambios */
+}
+
+/* Hacer el logo más pequeño en pantallas pequeñas */
+@media (max-width: 768px) {
+  .logo-img {
+      width: 100px; /* Reducir tamaño en pantallas pequeñas */
+  }
+}
+
+/* Limitar el tamaño máximo en pantallas grandes */
+@media (min-width: 1200px) {
+  .logo-img {
+      width: 150px; /* Tamaño máximo en pantallas grandes */
+  }
 }
 
 
