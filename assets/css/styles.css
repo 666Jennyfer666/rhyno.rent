@@ -85,9 +85,9 @@ a {
 }
 
 /* Hacer el logo aún más pequeño en pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .nav__logo-img {
-      width: 150px; /* Reducir tamaño del logo en pantallas pequeñas */
+      width: 165px; /* Reducir tamaño del logo en pantallas pequeñas */
   }
 }
 
@@ -382,7 +382,7 @@ a {
 }
 
 /* Estilos para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .titulo-contenido {
       text-align: center; /* Centra el texto en pantallas pequeñas */
       margin: 0 auto; /* Centra el contenido */
@@ -511,7 +511,7 @@ section {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .services-container {
       grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
   }
@@ -537,7 +537,8 @@ footer {
   bottom: 0;
 }
 
-@media (max-height:800px) {
+
+@media (max-height:850px) {
   footer {
       position: static;
   }
@@ -577,12 +578,12 @@ footer {
   transition: transform 0.3s ease; /* Animación suave para cambios */
 }
 
-/* Hacer el logo más pequeño en pantallas pequeñas */
+/* Hacer el logo más pequeño en pantallas pequeñas 
 @media (max-width: 768px) {
   .logo-img {
-      width: 100px; /* Reducir tamaño en pantallas pequeñas */
+      width: 100px;  Reducir tamaño en pantallas pequeñas 
   }
-}
+}*/
 
 /* Limitar el tamaño máximo en pantallas grandes */
 @media (min-width: 1200px) {

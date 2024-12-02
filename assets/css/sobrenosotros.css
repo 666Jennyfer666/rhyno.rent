@@ -58,7 +58,7 @@
 }
 
 /* Responsivo para pantallas pequeñas */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     .about-us__content {
         flex-direction: column;
         text-align: center;
