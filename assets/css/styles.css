@@ -185,7 +185,7 @@ a {
 }
 
 .nav__link:hover {
-  background-color: var(--black-color-light);
+  background-color: var(--white-color-light);
 }
 
 /* Show menu */

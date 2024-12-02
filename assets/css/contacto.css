@@ -57,7 +57,7 @@
 
 .contact__item i {
     font-size: 2rem;
-    color: #007bff;
+    color: #f40506;
     margin-bottom: 10px;
 }
 
@@ -73,6 +73,18 @@
     font-size: 1rem;
     color: #555;
     margin: 0;
+}
+
+.contact__item {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsivo */
