@@ -4,7 +4,10 @@
     margin: 0 auto;
     padding: 20px;
 }
+p {
+    margin-top: 10px;
 
+}
 
 /* Estilos para la sección "Sobre Nosotros" */
 .about-us {
