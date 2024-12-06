@@ -374,11 +374,11 @@ a {
 .titulo-contenido {
   position: relative;
   max-width: 800px;
-  margin-left: auto; /* Empuja el contenido hacia la derecha */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 0.5rem;
-  text-align: center; /* Alinea el texto a la derecha por defecto */
+  text-align: center; /* Alinea el texto al centro */
 }
 
 /* Estilos para pantallas pequeñas */
