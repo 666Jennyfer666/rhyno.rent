@@ -530,6 +530,9 @@ section {
   }
 }
 
+main {
+  flex: 1; /* Hace que el contenido principal crezca y empuje el footer hacia abajo */
+}
 
 /* footer */
 footer {
